@@ -23,6 +23,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -204,8 +205,8 @@
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">×</button>
             <h2 class="modal-title"><strong>Best Match</strong></h2>
+            <button type="button" class="close" data-dismiss="modal">×</button>
           </div>
           <div class="modal-body">
             <h2 id="match-name"></h2>
@@ -289,8 +290,9 @@
           $.post("/api/friends", userData, function(data) {
             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
             console.log(data);
-            $("#match-name").text(data.name);
-            $("#match-img").attr("src", data.photo);
+            $("#match-name").text(data[0].name);
+            $("#match-img").attr("src", data[0].photo);
+            $("#match-img").attr("alt", data[0].name);
 
             // Show the modal with the best match
             $("#results-modal").modal("toggle");
