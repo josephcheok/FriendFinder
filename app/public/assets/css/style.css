@@ -1,3 +1,9 @@
+body {
+  background-image: url(../img/Hearts.jpg) !important;
+  background-size: 220px;
+  background-repeat: repeat;
+}
+
 .card {
   border: none;
 }
@@ -11,15 +17,20 @@
 }
 
 .btn-primary {
-  background-color: magenta;
-  border: magenta;
+  background-color: hotpink;
+  border: hotpink;
 }
 
-.btn-primary:hover,
+.btn-primary:hover {
+  background-color: magenta !important;
+  border: magenta !important;
+}
+
 .btn-primary:active,
-.btn-primary:focus,
-.btn-primary:visited {
-  background-color: red;
+.btn-primary:focus {
+  background-color: red !important;
+  border: red !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.5) !important;
 }
 
 .jumbotron {
