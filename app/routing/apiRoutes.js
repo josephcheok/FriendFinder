@@ -9,6 +9,7 @@ module.exports = function(app) {
     var userStats = req.body;
     var worstDiff = 40;
     var closestMatch = [];
+    var matchPercentage = 0;
     for (i = 0; i < friends.length; i++) {
       var scoreDiff = 0;
       for (j = 0; j < friends[i].scores.length; j++) {
@@ -25,11 +26,14 @@ module.exports = function(app) {
           closestMatch.shift();
         }
         worstDiff = scoreDiff;
+        matchPercentage = Math.round((1 - worstDiff / 40) * 100);
       }
       console.log("Worst Diff :" + worstDiff);
     }
     friends.push(req.body);
+    closestMatch.push(matchPercentage);
     console.log(closestMatch);
+    console.log(matchPercentage);
     res.json(closestMatch);
   });
 };

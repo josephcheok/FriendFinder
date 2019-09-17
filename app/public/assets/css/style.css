@@ -1,4 +1,36 @@
-#match-img {
-  width: 200px;
-  height: auto;
+.card {
+  border: none;
+}
+
+.profile-text {
+  font-style: italic;
+}
+
+.fas {
+  color: red;
+}
+
+.btn-primary {
+  background-color: magenta;
+  border: magenta;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:visited {
+  background-color: red;
+}
+
+.jumbotron {
+  background-color: pink;
+  color: darkslategrey;
+}
+
+#jennifer {
+  color: magenta;
+}
+
+#breakline {
+  background: fuchsia;
 }
