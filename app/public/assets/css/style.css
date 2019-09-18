@@ -39,9 +39,83 @@ body {
 }
 
 #jennifer {
-  color: magenta;
+  color: magenta !important;
+}
+
+#match-img {
+  padding-top: 1.25rem;
+}
+
+#match-name {
+  color: darkslategrey;
 }
 
 #breakline {
   background: fuchsia;
+}
+
+.animation-bar {
+  position: relative;
+  display: block;
+  padding: 3px;
+  font-size: 8px;
+  line-height: 8px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.animation-bar span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 10px;
+  border-radius: 5px 0 0 5px;
+  overflow: hidden;
+  background-color: #f56982;
+  background-size: 100%;
+  background-image: linear-gradient(to bottom, #f2395a, #b90c2b);
+  animation: progress-bar 2s ease;
+}
+
+.animation-bar span::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-size: 100%;
+  background-image: linear-gradient(
+    45deg,
+    #fff 25%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 50%,
+    #fff 50%,
+    #fff 75%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 0)
+  );
+  background-size: 30px 30px;
+  opacity: 0.3;
+  animation: progress-bar-after 0.5s infinite linear;
+}
+
+@keyframes progress-bar {
+  0% {
+    width: 20%;
+  }
+  100% {
+    width: var(--width);
+  }
+}
+
+@keyframes progress-bar-after {
+  0% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 30px 100%;
+  }
 }

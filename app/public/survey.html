@@ -209,7 +209,7 @@
             <button type="button" class="close" data-dismiss="modal">×</button>
           </div>
           <div class="modal-body">
-            <h2 id="match-name"></h2>
+            <h2 id="jennifer">Jennifer <span id="match-name"></span></h2>
             <div class="card mb-3" style="max-width: 540px;">
               <div class="row no-gutters">
                 <div class="col-md-4">
@@ -220,10 +220,13 @@
                     <h5 class="card-title">
                       <span id="matchability"></span>% Match!
                     </h5>
+                    <div class="animation-bar">
+                      <span id="barstats"></span>
+                    </div>
                     <p class="card-text profile-text"></p>
                     <p class="card-text">
                       <small class="text-muted"
-                        >Last online 10 minutes ago</small
+                        >Last online <span id="online"></span> ago</small
                       >
                     </p>
                   </div>
@@ -313,7 +316,12 @@
             $("#match-img").attr("src", data[0].photo);
             $("#match-img").attr("alt", data[0].name);
             $("#matchability").text(data[1]);
+            $("#barstats").attr(
+              "style",
+              `--width: ${data[1]}%; width: ${data[1]}%;`
+            );
             $(".profile-text").text(data[0].about);
+            $("#online").text(data[0].online);
             // Show the modal with the best match
             $("#results-modal").modal("toggle");
           });
