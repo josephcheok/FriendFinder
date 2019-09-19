@@ -12,7 +12,7 @@ var friendArray = [
     photo: "./assets/img/Connelly.jpg",
     scores: [3, 2, 4, 4, 3, 1, 3, 4, 1, 2],
     about:
-      "Best Supporting Actress for A Beautiful Mind (2001). Connelly's winning role as a wife supporting her husband suffering from paranoid schizophrenia, wasn't because of her acting ability alone: it was an extension of her.",
+      "Best Supporting Actress for A Beautiful Mind (2001). Connelly's winning role as a wife supporting her husband suffering from paranoid schizophrenia, wasn't because of her acting ability alone: it was an extension of her. ",
     online: "2 days"
   },
   {
