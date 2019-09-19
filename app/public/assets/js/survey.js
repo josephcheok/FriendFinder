@@ -14,4 +14,4 @@ for (i = 1; i < question.length; i++) {
           </select>`);
 }
 
-console.log(question[1]);
+console.log(question[10]);
