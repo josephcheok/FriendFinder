@@ -12,7 +12,7 @@ Jennifer Finder already has a record of how the other Jennifers have answered th
 
 This is a full stack application that uses
 
-i. Express to handle routing and connection to 'database' (stored in a Javascript file)
+i. Node and Express servers to handle routing and connection to 'database' (stored in a Javascript file)
 
 ii. Browserify that enables Node commands to be used on browser side
 
