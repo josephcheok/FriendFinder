@@ -30,7 +30,7 @@ module.exports = function(app) {
       }
       console.log("Worst Diff :" + worstDiff);
     }
-    friends.push(req.body);
+    // friends.push(req.body);
     closestMatch.push(matchPercentage);
     console.log(closestMatch);
     console.log(matchPercentage);

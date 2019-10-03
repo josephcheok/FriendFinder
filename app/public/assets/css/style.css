@@ -13,7 +13,7 @@ body {
 }
 
 .fas {
-  color: red;
+  color: crimson;
 }
 
 .btn-primary {
@@ -35,11 +35,11 @@ body {
 
 .jumbotron {
   background-color: pink;
-  color: darkslategrey;
+  color: dimgrey;
 }
 
 #jennifer {
-  color: magenta !important;
+  color: hotpink !important;
 }
 
 #match-img {
@@ -51,7 +51,7 @@ body {
 }
 
 #breakline {
-  background: fuchsia;
+  background: hotpink;
 }
 
 .animation-bar {
